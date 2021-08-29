@@ -39,7 +39,7 @@ class App extends Component{
 
     return (
       <div className="App">
-      <h1 className="title">CAFFE Expresso <GiCoffeeCup /></h1>
+      <h1 className="title">Expresso <GiCoffeeCup /></h1>
 
       <Section title="Please leave feedback">
         <FeedbackOptions options={feedbackButtons}

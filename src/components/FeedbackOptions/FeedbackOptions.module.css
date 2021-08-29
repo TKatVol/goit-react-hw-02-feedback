@@ -1,0 +1,13 @@
+.feedbackBtn {
+  width: 90px;
+  padding: 10px;
+  border: none;
+
+  text-transform: capitalize;
+  background-color: #330033;
+  color: #cccccc;
+}
+
+.feedbackBtn:not(:last-child) {
+  margin-right: 10px;
+}

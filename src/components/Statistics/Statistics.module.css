@@ -1,0 +1,30 @@
+.table {
+  width: 320px;
+  margin: 0 auto;
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+}
+
+.table th {
+  font-weight: bold;
+  padding: 10px;
+
+  border: 1px solid #dddddd;
+  color: #000033;
+
+  text-align: center;
+}
+
+.section {
+  text-align: left;
+}
+
+.text {
+  font-size: 20px;
+  color: #fff;
+}
+
+.icon {
+  font-size: 20px;
+  vertical-align: sub;
+}

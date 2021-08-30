@@ -1,10 +1,8 @@
 .App {
-  height: 100vh;
+  width: 320px;
+  margin: 0 auto;
   padding: 20px;
   text-align: center;
-  background-color: #6f4e37;
-  background-image: radial-gradient(ellipse at top, #e66465, transparent),
-    radial-gradient(ellipse at bottom, #6f4e37, transparent);
 }
 
 .title {

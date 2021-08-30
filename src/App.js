@@ -14,20 +14,19 @@ class App extends Component{
     bad: 0,
   }
 
-  handleIncrementFeedback = event => {
-    
+  handleIncrementFeedback = event => {    
     this.setState((prevState) => ({
       [event.target.textContent]: prevState[event.target.textContent] + 1
     }));
-
   }
 
   countTotalFeedback = (good, neutral, bad) => {
     return good + neutral + bad;
   }
 
-  countPositiveFeedbackPercentage = (good, bad) => {
-    const positiveFeedback = good === 0 ? good : Math.floor(good * 100 / (good + bad));
+  countPositiveFeedbackPercentage = totalFeedback => {
+    const { good } = this.state;
+    const positiveFeedback = good === 0 ? good : Math.round(good * 100 / totalFeedback);
     return positiveFeedback;
   }
 
@@ -35,7 +34,7 @@ class App extends Component{
     const { good, neutral, bad } = this.state;
     const totalFeedback = this.countTotalFeedback(good, neutral, bad);
     const feedbackButtons = Object.keys(this.state);
-    const positivePercentage = this.countPositiveFeedbackPercentage(good, bad);
+    const positivePercentage = this.countPositiveFeedbackPercentage(totalFeedback);
 
     return (
       <div className="App">

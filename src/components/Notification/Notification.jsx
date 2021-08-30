@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 
+import s from '../Notification/Notification.module.css';
+
 function Notification({ message }) {
     return (
-        <p>{message}</p>
+        <p className={s.text}>{message}</p>
     )
 }
 

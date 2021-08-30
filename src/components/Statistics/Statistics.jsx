@@ -1,15 +1,33 @@
 import PropTypes from 'prop-types';
-//import s from './Statistics.css';
+import { FiThumbsUp, FiMeh, FiThumbsDown } from "react-icons/fi"; 
+
+import s from '../Statistics/Statistics.module.css';
 
 function Statistics({ good, neutral, bad, total, positivePercentage }) {
     return (
-        <>
-        <p>Good: {good}</p>
-        <p>Neutral: {neutral}</p>
-        <p>Bad: {bad}</p>
-        <p>Total: {total}</p>
-         <p>Positive feedback: {positivePercentage}%</p>
-        </>
+        <div className={s.section}>
+            <table className={s.table}>
+                <thead>
+                    <tr>
+                        <th>Good <span ><FiThumbsUp className={s.icon } style={{color: '#ffffff', fill: 'green'}}/></span></th>
+                        <th>Neutral <FiMeh className={s.icon } style={{color: '#000000', fill:'yellow'}}/></th>
+                        <th>Bad <FiThumbsDown className={s.icon } style={{color: '#ffffff', fill:'red'}}/> </th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <th>{good}</th>
+                        <th>{neutral}</th>
+                        <th>{bad}</th>
+                    </tr>
+                </tbody>
+                
+            </table >
+
+            <p className={s.text}>Total: {total}</p>
+            <p className={s.text}>Positive feedback: {positivePercentage}%</p>
+        </div>
     )
 }
 
